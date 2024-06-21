@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReGente</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+  </head>
+  <body>
+    <header>
+      <div id="header-content">
+        <div id="logo">
+          <a href=""
+            ><img src="./assets/logo_regente_branco.svg" alt="Logo ReGente"
+          /></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/">Pagina Inicial</a></li>
+            <li><a href="/sobre">Sobre</a></li>
+            <li><a href="/contato">Contato</a></li>
+            <li><a href="/download">Download</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div id="main-content">
+        <div id="text-content">
+          <h1>ReGente</h1>
+          <p>
+            Aplicativo para acompanhamento de rotinas e saúde mental de
+            estudantes e profissionais da saúde
+          </p>
+          <div id="img-content">
+            <img src="./assets/Vespertino_feliz.svg" alt="" class="side-img" />
+            <img
+              src="./assets/Neutro boas-vindas.svg"
+              alt=""
+              class="center-img"
+            />
+            <img src="./assets/Matutino_feliz.svg" alt="" class="side-img" />
+          </div>
+          <button>Download</button>
+        </div>
+
+        <div id="func-content">
+          <h1>Funcionalidades do ReGente</h1>
+          <div class="button-group">
+            <button id="btn-daily" onclick="updateContent('Daily', this)">
+              Diário de Emoções
+            </button>
+            <button
+              id="btn-questionary"
+              onclick="updateContent('Questionary', this)"
+            >
+              Questionários de Bem-Estar
+            </button>
+            <button id="btn-visual" onclick="updateContent('Visual', this)">
+              Acompanhamento Visual de Dados
+            </button>
+            <button id="btn-security" onclick="updateContent('Security', this)">
+              Segurança e Privacidade
+            </button>
+          </div>
+          <section class="firstSection">
+            <div class="intro-text">
+              <h1 id="feature-title"></h1>
+              <p id="feature-description"></p>
+            </div>
+            <div class="img-func">
+              <img id="feature-image" src="./assets/Cronotipo.png" alt="" />
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <section>
+        <div class="logo">
+          <img src="./assets/logo_regente_branco.svg" alt="Logo ReGente" />
+        </div>
+        <div id="div-nav">
+          <nav>
+            <ul>
+              <li><a href="/">Pagina Inicial</a></li>
+              <li><a href="/sobre">Sobre</a></li>
+              <li><a href="/contato">Contato</a></li>
+              <li><a href="/download">Download</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <div class="copyright">
+        <p>&copy; 2024 ReGente. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
