@@ -6,7 +6,7 @@
 
 Você pode acessar a landing page hospedada no Vercel através do link abaixo:
 
-[ReGente](https://seu-projeto.vercel.app)
+[ReGente](https://landing-page-regente.vercel.app)
 
 
 ### Descrição:
