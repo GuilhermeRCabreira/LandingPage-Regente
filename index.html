@@ -4,8 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ReGente</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/home.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
   </head>
   <body>
     <header>
@@ -18,9 +25,8 @@
         <nav>
           <ul>
             <li><a href="/">Pagina Inicial</a></li>
-            <li><a href="/sobre">Sobre</a></li>
-            <li><a href="/contato">Contato</a></li>
-            <li><a href="/download">Download</a></li>
+            <li><a href="./sobre.html">Sobre</a></li>
+            <li><a href="./contato.html">Contato</a></li>
           </ul>
         </nav>
       </div>
@@ -42,9 +48,11 @@
             />
             <img src="./assets/Matutino_feliz.svg" alt="" class="side-img" />
           </div>
-          <button>Download</button>
+          <button id="downloadButton">Download</button>
         </div>
-
+        <div id="notification" class="hidden">
+          Download indisponível no momento
+        </div>
         <div id="func-content">
           <h1>Funcionalidades do ReGente</h1>
           <div class="button-group">
@@ -85,9 +93,8 @@
           <nav>
             <ul>
               <li><a href="/">Pagina Inicial</a></li>
-              <li><a href="/sobre">Sobre</a></li>
-              <li><a href="/contato">Contato</a></li>
-              <li><a href="/download">Download</a></li>
+              <li><a href="./sobre.html">Sobre</a></li>
+              <li><a href="./contato.html">Contato</a></li>
             </ul>
           </nav>
         </div>

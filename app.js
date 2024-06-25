@@ -9,29 +9,28 @@ const functionalities = {
     title: "Diário de Emoções",
     description:
       "Registre diariamente seus níveis de ansiedade e tristeza.Acompanhe seus horários de sono, exposição à luz, atividades de trabalho/estudo, exercícios e alimentação.",
-    image: "./assets/cronotipo.png",
+    image: "./assets/diario.png",
   },
   Questionary: {
     title: "Questionários de Bem-Estar",
     description:
-      "With a single codebase, you can create apps for multiple platforms, making your development process more productive.",
-    image: "./assets/productive.png",
+      "Responda a questionários personalizados para avaliar seu bem-estar emocional e mental. Receba feedback imediato e dicas para melhorar sua qualidade de vida com base nas suas respostas. Nossos questionários são desenvolvidos por especialistas para garantir uma avaliação precisa e útil.",
+    image: "./assets/questionario.png",
   },
   Visual: {
     title: "Acompanhamento Visual de Dados",
     description:
-      "Flutter provides a high degree of flexibility in designing custom interfaces and building complex applications.",
-    image: "./assets/flexible.png",
+      "Visualize seus dados de forma clara e intuitiva. Gráficos e tabelas interativos permitem acompanhar suas emoções, atividades e hábitos ao longo do tempo, facilitando a identificação de padrões e tendências. Compreenda melhor seu estado emocional e físico com nossos recursos visuais detalhados.",
+    image: "./assets/grafico.png",
   },
   Security: {
     title: "Segurança e Privacidade",
     description:
-      "Flutter provides a high degree of flexibility in designing custom interfaces and building complex applications.",
-    image: "./assets/flexible.png",
+      "Sua segurança e privacidade são nossa prioridade. Todos os dados registrados no aplicativo são protegidos por criptografia de ponta a ponta. Garantimos que suas informações pessoais serão mantidas confidenciais e seguras, respeitando a Lei Geral de Proteção de Dados(LGPD).",
+    image: "./assets/lgpd.png",
   },
 };
 
-// Função para atualizar o conteúdo
 function updateContent(feature, button) {
   const { title, description, image } = functionalities[feature];
 
@@ -39,10 +38,19 @@ function updateContent(feature, button) {
   document.getElementById("feature-description").textContent = description;
   document.getElementById("feature-image").src = image;
 
-  // Remover classe 'selected' de todos os botões
   const buttons = document.querySelectorAll(".button-group button");
   buttons.forEach((btn) => btn.classList.remove("selected"));
 
-  // Adicionar classe 'selected' ao botão clicado
   button.classList.add("selected");
 }
+
+document
+  .getElementById("downloadButton")
+  .addEventListener("click", function () {
+    const notification = document.getElementById("notification");
+    notification.classList.remove("hidden");
+
+    setTimeout(function () {
+      notification.classList.add("hidden");
+    }, 3000); // Notificação desaparece após 3 segundos
+  });

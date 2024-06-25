@@ -1,0 +1,103 @@
+:root {
+  --primary-color: #ff8939;
+  --secondary-color: #fca844;
+  --btn-color: #f58b44;
+  --text-color: #444950;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  background: linear-gradient(to bottom, #ff8939, #fca844);
+  background-attachment: fixed;
+  color: #ffffff;
+  height: 100%;
+}
+
+#main-content {
+  background-color: white;
+  border-radius: 25px;
+  color: var(--text-color);
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
+#main-content h1 {
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+}
+
+#main-content h2 {
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+#section-forms {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 80%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  background-color: var(--btn-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #f3704b;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  #main-content {
+    width: 95%;
+    padding: 10px;
+  }
+
+  #main-content h1,
+  #main-content h2 {
+    font-size: 24px; /* Ajusta o tamanho da fonte para h1 e h2 */
+  }
+
+  form {
+    width: 90%; /* Aumenta a largura do formulário para ocupar mais espaço */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 12px; /* Aumenta o padding para uma melhor visualização em dispositivos menores */
+  }
+
+  button[type="submit"] {
+    padding: 12px 24px; /* Aumenta o padding do botão para melhor toque */
+  }
+}
