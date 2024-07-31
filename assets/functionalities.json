@@ -1,0 +1,23 @@
+{
+    "Daily": {
+      "title": "Diário de Emoções",
+      "description": "Registre diariamente seus níveis de ansiedade e tristeza. Acompanhe seus horários de sono, exposição à luz, atividades de trabalho/estudo, exercícios e alimentação.",
+      "image": "./assets/diario.png"
+    },
+    "Questionary": {
+      "title": "Questionários de Bem-Estar",
+      "description": "Responda a questionários personalizados para avaliar seu bem-estar emocional e mental. Receba feedback imediato e dicas para melhorar sua qualidade de vida com base nas suas respostas. Nossos questionários são desenvolvidos por especialistas para garantir uma avaliação precisa e útil.",
+      "image": "./assets/questionario.png"
+    },
+    "Visual": {
+      "title": "Acompanhamento Visual de Dados",
+      "description": "Visualize seus dados de forma clara e intuitiva. Gráficos e tabelas interativos permitem acompanhar suas emoções, atividades e hábitos ao longo do tempo, facilitando a identificação de padrões e tendências. Compreenda melhor seu estado emocional e físico com nossos recursos visuais detalhados.",
+      "image": "./assets/grafico.png"
+    },
+    "Security": {
+      "title": "Segurança e Privacidade",
+      "description": "Sua segurança e privacidade são nossa prioridade. Todos os dados registrados no aplicativo são protegidos por criptografia de ponta a ponta. Garantimos que suas informações pessoais serão mantidas confidenciais e seguras, respeitando a Lei Geral de Proteção de Dados (LGPD).",
+      "image": "./assets/lgpd.png"
+    }
+  }
+  

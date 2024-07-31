@@ -55,7 +55,6 @@ footer .copyright {
   margin-top: 20px;
 }
 
-/* Media Queries */
 @media only screen and (max-width: 768px) {
   section,
   .logo,
@@ -67,7 +66,7 @@ footer .copyright {
   }
 
   .logo img {
-    margin-bottom: 10px; /* Adiciona espaço entre o logo e a navegação */
+    margin-bottom: 10px;
   }
 
   #div-nav ul {
@@ -77,6 +76,6 @@ footer .copyright {
   }
 
   #div-nav ul li {
-    margin: 10px; /* Aumenta o espaçamento entre os itens de navegação */
+    margin: 10px;
   }
 }

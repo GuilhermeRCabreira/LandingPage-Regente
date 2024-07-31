@@ -1,42 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const defaultButton = document.getElementById("btn-daily"); // ID do botão que deseja iniciar selecionado
-  updateContent("Daily", defaultButton); // Chama a função updateContent com o botão selecionado
+  const defaultButton = document.getElementById("btn-daily");
+  updateContent("Daily", defaultButton);
 });
 
-// Dados de funcionalidades
-const functionalities = {
-  Daily: {
-    title: "Diário de Emoções",
-    description:
-      "Registre diariamente seus níveis de ansiedade e tristeza.Acompanhe seus horários de sono, exposição à luz, atividades de trabalho/estudo, exercícios e alimentação.",
-    image: "./assets/diario.png",
-  },
-  Questionary: {
-    title: "Questionários de Bem-Estar",
-    description:
-      "Responda a questionários personalizados para avaliar seu bem-estar emocional e mental. Receba feedback imediato e dicas para melhorar sua qualidade de vida com base nas suas respostas. Nossos questionários são desenvolvidos por especialistas para garantir uma avaliação precisa e útil.",
-    image: "./assets/questionario.png",
-  },
-  Visual: {
-    title: "Acompanhamento Visual de Dados",
-    description:
-      "Visualize seus dados de forma clara e intuitiva. Gráficos e tabelas interativos permitem acompanhar suas emoções, atividades e hábitos ao longo do tempo, facilitando a identificação de padrões e tendências. Compreenda melhor seu estado emocional e físico com nossos recursos visuais detalhados.",
-    image: "./assets/grafico.png",
-  },
-  Security: {
-    title: "Segurança e Privacidade",
-    description:
-      "Sua segurança e privacidade são nossa prioridade. Todos os dados registrados no aplicativo são protegidos por criptografia de ponta a ponta. Garantimos que suas informações pessoais serão mantidas confidenciais e seguras, respeitando a Lei Geral de Proteção de Dados(LGPD).",
-    image: "./assets/lgpd.png",
-  },
-};
+async function fetchFunctionalities() {
+  try {
+    const response = await fetch("./assets/functionalities.json");
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("There was a problem with the fetch operation:", error);
+    return {};
+  }
+}
 
-function updateContent(feature, button) {
-  const { title, description, image } = functionalities[feature];
+async function updateContent(feature, button) {
+  const functionalities = await fetchFunctionalities();
+  const { title, description, image } = functionalities[feature] || {};
 
-  document.getElementById("feature-title").textContent = title;
-  document.getElementById("feature-description").textContent = description;
-  document.getElementById("feature-image").src = image;
+  if (title && description && image) {
+    document.getElementById("feature-title").textContent = title;
+    document.getElementById("feature-description").textContent = description;
+    document.getElementById("feature-image").src = image;
+  } else {
+    document.getElementById("feature-title").textContent = "Feature not found";
+    document.getElementById("feature-description").textContent = "";
+    document.getElementById("feature-image").src = "";
+  }
 
   const buttons = document.querySelectorAll(".button-group button");
   buttons.forEach((btn) => btn.classList.remove("selected"));
@@ -52,5 +45,5 @@ document
 
     setTimeout(function () {
       notification.classList.add("hidden");
-    }, 3000); // Notificação desaparece após 3 segundos
+    }, 3000);
   });

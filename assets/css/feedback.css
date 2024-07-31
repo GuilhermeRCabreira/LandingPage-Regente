@@ -73,7 +73,6 @@ button[type="submit"]:hover {
   background-color: #f3704b;
 }
 
-/* Media Queries */
 @media only screen and (max-width: 768px) {
   #main-content {
     width: 95%;
@@ -82,21 +81,21 @@ button[type="submit"]:hover {
 
   #main-content h1,
   #main-content h2 {
-    font-size: 24px; /* Ajusta o tamanho da fonte para h1 e h2 */
+    font-size: 24px;
   }
 
   form {
-    width: 90%; /* Aumenta a largura do formulário para ocupar mais espaço */
+    width: 90%;
   }
 
   input[type="text"],
   input[type="email"],
   textarea {
-    padding: 12px; /* Aumenta o padding para uma melhor visualização em dispositivos menores */
+    padding: 12px;
   }
 
   button[type="submit"] {
-    padding: 12px 24px; /* Aumenta o padding do botão para melhor toque */
+    padding: 12px 24px;
   }
 }
 
