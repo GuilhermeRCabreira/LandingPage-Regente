@@ -178,32 +178,70 @@ main {
   z-index: 1000;
 }
 
-/* Media Queries */
-@media only screen and (max-width: 768px) {
-  #text-content h1,
-  #func-content h1 {
-    font-size: 30px;
+/* Adicionando responsividade */
+@media only screen and (max-width: 1024px) {
+  #text-content h1 {
+    font-size: 40px;
   }
 
   #text-content p {
-    font-size: 18px;
+    font-size: 20px;
   }
 
-  #img-content img,
-  .img-func img {
-    width: 250px;
+  #img-content img {
+    width: 300px;
   }
 
-  .firstSection,
+  #func-content {
+    width: 90%;
+  }
+
+  #func-content h1 {
+    font-size: 35px;
+  }
+
+  .firstSection {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .intro-text h1 {
+    font-size: 1.25rem;
+  }
+
   .button-group {
     flex-direction: column;
-    align-items: center;
   }
 
-  #text-content button,
-  .button-group button {
-    width: 150px;
-    padding: 10px 15px;
+  .img-func img {
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #text-content,
+  #func-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #text-content h1,
+  #func-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .firstSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .img-func img {
+    max-width: 300px;
+  }
+
+  #text-content button {
+    width: 100%;
+    padding: 12px 0;
     font-size: 18px;
   }
 }

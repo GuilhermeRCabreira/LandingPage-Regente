@@ -4,7 +4,6 @@
   --btn-color: #f58b44;
   --text-color: #444950;
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -53,8 +52,6 @@ label {
   margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
 textarea {
   width: 100%;
   padding: 8px;
@@ -63,7 +60,7 @@ textarea {
   border: 1px solid #ccc;
 }
 
-button[type="submit"] {
+button {
   background-color: var(--btn-color);
   color: white;
   padding: 10px 20px;
@@ -77,60 +74,76 @@ button[type="submit"]:hover {
 }
 
 /* Media Queries */
-@media only screen and (max-width: 1024px) {
-  #main-content {
-    width: 90%;
-    padding: 15px;
-  }
-
-  #main-content h1 {
-    font-size: 36px;
-  }
-
-  #main-content h2 {
-    font-size: 28px;
-  }
-
-  form {
-    width: 90%;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    padding: 10px;
-  }
-
-  button[type="submit"] {
-    padding: 12px 24px;
-  }
-}
-
 @media only screen and (max-width: 768px) {
   #main-content {
     width: 95%;
     padding: 10px;
   }
 
-  #main-content h1 {
-    font-size: 30px;
-  }
-
+  #main-content h1,
   #main-content h2 {
-    font-size: 24px;
+    font-size: 24px; /* Ajusta o tamanho da fonte para h1 e h2 */
   }
 
   form {
-    width: 100%;
+    width: 90%; /* Aumenta a largura do formulário para ocupar mais espaço */
   }
 
   input[type="text"],
   input[type="email"],
   textarea {
-    padding: 12px;
+    padding: 12px; /* Aumenta o padding para uma melhor visualização em dispositivos menores */
   }
 
   button[type="submit"] {
-    padding: 12px 24px;
+    padding: 12px 24px; /* Aumenta o padding do botão para melhor toque */
   }
+}
+
+#feedbacks {
+  list-style: none;
+}
+
+.feedback-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.feedback-message {
+  flex-grow: 1;
+  margin: 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background-color: var(--btn-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f3704b;
+}
+
+.edit-btn {
+  background-color: var(--secondary-color);
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
 }
