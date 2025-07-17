@@ -1,166 +1,125 @@
-:root {
-  --primary-color: #ff8939;
-  --secondary-color: #fca844;
-  --btn-color: #f58b44;
-  --text-color: #444950;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Nunito", sans-serif;
-  background: linear-gradient(to bottom, #ff8939, #fca844);
-  background-attachment: fixed;
-  color: #ffffff;
-  height: 100%;
-  
-}
+/*--- Politicas Style ---*/
 
 #main-content {
   background-color: white;
   border-radius: 25px;
-  color: var(--text-color);
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
+  color: #444950;
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
 }
 
 #main-content h1 {
-  font-size: 50px;
+  font-size: 3rem;
   font-weight: 900;
   text-align: center;
+  margin-bottom: 30px;
 }
+
 #main-content h2 {
-  width: 90%;
-  padding-left: 2.5%;
-  font-size: 18px;
-  font-weight: 900;
-  text-align: justify;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 #main-content p {
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  width: 95%;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 500;
   text-align: justify;
+  line-height: 1.7;
+  margin-bottom: 16px;
 }
 
-#table {
- display: flex;
- justify-content: center;
+#main-content strong {
+  font-weight: 700;
+}
 
-  
+/* --- Tabela --- */
+
+#table {
+  overflow-x: auto;
+  margin: 20px 0;
 }
 
 table {
-  width: 90%;
+  width: 100%;
   border-collapse: collapse;
-  text-align: center;
-  color: var(--text-color);
-  font-size: 13px;
-  
-  margin: 20px;
- 
-}
-
-table tbody {
-  background-color: #cecece;
+  color: #444950;
+  font-size: 1rem;
+  min-width: 600px;
 }
 
 table thead {
-  background-color: var(--text-color);
+  background-color: #444950;
   color: #ffffff;
-  
+  text-align: left;
 }
 
 table th,
 table td {
-  padding: 10px;
-  border: 1px solid #000000;
-  
-  
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  vertical-align: top;
 }
 
-strong {
-  font-weight: 1000;
+table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
 }
 
-/* Media Queries */
-@media only screen and (max-width: 768px) {
+/*--- Responsividade do Conteúdo Principal ---*/
+
+@media (max-width: 992px) {
+  #main-content h1 {
+    font-size: 2.5rem;
+  }
+  #main-content h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
   #main-content {
-    width: 80%;
-    padding: 5px;
+    width: 95%;
+    padding: 30px 20px;
   }
 
   #main-content h1 {
-    font-size: 30px;
+    font-size: 2rem;
   }
 
   #main-content h2 {
-    font-size: 18px;
+    font-size: 1.2rem;
   }
 
   #main-content p {
-    font-size: 13px;
-  }   
-
-  
-  
-    table th,
-    table td {
-      font-size: 14px;
-      padding: 8px;
-    }
-  
-}
-
-@media only screen and (max-width: 600px) {
- 
-
-  #main-content h1 {
-    font-size: 20px;
+    font-size: 0.95rem;
   }
 
-  #main-content h2 {
-    font-size: 14px;
-  }
-
-  #main-content p {
-    font-size: 11px;
-  }   
-
-  
-  table th,
-  table td {
-    font-size: 11px;
-    padding: 8px;
+  table {
+    font-size: 0.95rem;
   }
 }
 
-@media only screen and (max-width: 450px) {
- 
-
+@media (max-width: 480px) {
+  #main-content {
+    padding: 25px 15px;
+  }
   #main-content h1 {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
-
   #main-content h2 {
-    font-size: 12px;
+    font-size: 1.1rem;
+  }
+  #main-content p {
+    font-size: 0.9rem;
   }
 
-  #main-content p {
-    font-size: 9px;
-  }   
-
-  
-  table th,
-  table td {
-    font-size: 9px;
-    padding: 8px;
+  table {
+    font-size: 0.9rem;
   }
 }

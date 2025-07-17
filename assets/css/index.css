@@ -1,0 +1,261 @@
+/* --- Main Content Styles --- */
+main {
+  padding: 40px 20px;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+#text-content {
+  text-align: center;
+}
+
+#text-content h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+#text-content p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  max-width: 600px;
+  margin: 15px auto 30px;
+}
+
+#img-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#img-content img {
+  width: 250px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.center-img {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.side-img {
+  transform: scale(0.9);
+  z-index: 0;
+}
+
+#downloadButton {
+  background-color: var(--btn-color);
+  color: white;
+  padding: 14px 20px;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  width: 220px;
+  border-radius: 25px;
+  font-weight: 800;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#downloadButton:hover {
+  background-color: #e07a3a;
+  transform: translateY(-2px);
+}
+
+/* --- Functionalities Section --- */
+#func-content {
+  background-color: white;
+  border-radius: 25px;
+  color: var(--text-color);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+#func-content > h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.button-group button {
+  padding: 12px 25px;
+  cursor: pointer;
+  border: 2px solid #f0f0f0;
+  background-color: #f0f0f0;
+  transition: all 0.3s ease;
+  border-radius: 25px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.button-group button.selected,
+.button-group button:hover {
+  background-color: var(--btn-color);
+  color: #fff;
+  border-color: var(--btn-color);
+}
+
+.feature-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+}
+
+.intro-text {
+  flex: 1;
+  text-align: left;
+}
+
+#feature-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+#feature-description {
+  line-height: 1.6;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.img-func {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#feature-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+/* --- Notification Styles --- */
+#notification {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  padding: 15px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+#notification.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*--- Responsividade do Conteúdo Principal (Home) ---*/
+
+@media (max-width: 992px) {
+  #text-content h1 {
+    font-size: 2.8rem;
+  }
+  #text-content p {
+    font-size: 1.2rem;
+  }
+  #func-content > h1 {
+    font-size: 2rem;
+  }
+
+  .feature-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #text-content h1 {
+    font-size: 2.2rem;
+  }
+  #text-content p {
+    font-size: 1.1rem;
+  }
+
+  #img-content {
+    gap: 5px;
+  }
+
+  #img-content img {
+    width: 150px;
+  }
+
+  .center-img {
+    transform: scale(1.1);
+  }
+
+  .button-group {
+    gap: 10px;
+  }
+
+  .button-group button {
+    padding: 10px 15px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  #text-content h1 {
+    font-size: 2rem;
+  }
+  #text-content p {
+    font-size: 1rem;
+  }
+
+  #img-content img {
+    width: 100px;
+  }
+
+  #downloadButton {
+    width: 180px;
+    font-size: 18px;
+  }
+
+  #func-content {
+    padding: 20px;
+  }
+
+  #func-content > h1 {
+    font-size: 1.8rem;
+  }
+  #feature-title {
+    font-size: 1.5rem;
+  }
+  #feature-description {
+    font-size: 1rem;
+  }
+}

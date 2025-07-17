@@ -1,65 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ReGente</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/home.css" />
-    <link rel="stylesheet" href="./assets/css/footer.css" />
+
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
   </head>
   <body>
     <header>
       <nav>
+        <a href="./index.html" class="logo-link">
+          <img src="./assets/logo_regente_branco.svg" alt="Logo ReGente" />
+        </a>
         <input type="checkbox" id="check" />
-
         <label for="check" class="checkbtn">
           <i class="fas fa-bars"></i>
         </label>
-
-        <label class="logo">
-          <img src="./assets/logo_regente_branco.svg" alt="Logo ReGente" />
-        </label>
-
-        <ul>
-          <li><a href="/">Pagina Inicial</a></li>
+        <ul class="nav-links">
+          <li><a href="./index.html" class="active">Página Inicial</a></li>
           <li><a href="./sobre.html">Sobre</a></li>
           <li><a href="./termos_de_uso.html">Termos de Uso</a></li>
           <li>
             <a href="./politica_de_privicidade.html">Política de Privacidade</a>
           </li>
-          <li><a href="./contato.html">Contato</a></li>
+          <!-- <li><a href="./contato.html">Contato</a></li> -->
         </ul>
       </nav>
     </header>
+
     <main>
       <div id="main-content">
         <div id="text-content">
           <h1>ReGente</h1>
           <p>
             Aplicativo para acompanhamento de rotinas e saúde mental de
-            estudantes e profissionais da saúde
+            estudantes e profissionais da saúde.
           </p>
           <div id="img-content">
-            <img src="./assets/Vespertino_feliz.svg" alt="" class="side-img" />
+            <img
+              src="./assets/Matutino_feliz.svg"
+              alt="Ilustração Matutino"
+              class="side-img"
+            />
             <img
               src="./assets/Neutro boas-vindas.svg"
-              alt=""
+              alt="Ilustração Neutro"
               class="center-img"
             />
-            <img src="./assets/Matutino_feliz.svg" alt="" class="side-img" />
+            <img
+              src="./assets/Vespertino_feliz.svg"
+              alt="Ilustração Vespertino"
+              class="side-img"
+            />
           </div>
           <button id="downloadButton">Download</button>
         </div>
-        <div id="notification" class="hidden">
-          Download indisponível no momento
-        </div>
+
+        <div id="notification">Download indisponível no momento.</div>
+
         <div id="func-content">
           <h1>Funcionalidades do ReGente</h1>
           <div class="button-group">
@@ -73,42 +89,63 @@
               Questionários de Bem-Estar
             </button>
             <button id="btn-visual" onclick="updateContent('Visual', this)">
-              Acompanhamento Visual de Dados
+              Acompanhamento Visual
             </button>
             <button id="btn-security" onclick="updateContent('Security', this)">
               Segurança e Privacidade
             </button>
           </div>
-          <section class="firstSection">
+          <section class="feature-section">
             <div class="intro-text">
-              <h1 id="feature-title"></h1>
-              <p id="feature-description"></p>
+              <h1 id="feature-title">Título da Funcionalidade</h1>
+              <p id="feature-description">
+                Descrição da funcionalidade aparecerá aqui.
+              </p>
             </div>
             <div class="img-func">
-              <img id="feature-image" src="./assets/Cronotipo.png" alt="" />
+              <img
+                id="feature-image"
+                src="https://placehold.co/450x300/cccccc/444950?text=Imagem+da+Funcionalidade"
+                alt="Imagem da Funcionalidade"
+              />
             </div>
           </section>
         </div>
       </div>
     </main>
+
     <footer>
-      <section>
-        <div class="logo">
+      <div class="footer-content">
+        <div class="footer-logo">
           <img src="./assets/logo_regente_branco.svg" alt="Logo ReGente" />
         </div>
-        <div id="div-nav">
-          <nav>
-            <ul>
-              <li><a href="/">Pagina Inicial</a></li>
-              <li><a href="./sobre.html">Sobre</a></li>
-              <li><a href="./contato.html">Contato</a></li>
-            </ul>
-          </nav>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="./index.html" class="active">Página Inicial</a></li>
+            <li><a href="./sobre.html">Sobre</a></li>
+            <li><a href="./termos_de_uso.html">Termos de Uso</a></li>
+            <li>
+              <a href="./politica_de_privicidade.html"
+                >Política de Privacidade</a
+              >
+            </li>
+          </ul>
+        </nav>
+        
+        <div class="footer-social">
+           
+            </a>
+            <a href="https://www.instagram.com/regenteapp/?utm_source=qr&igsh=OGRwZHMxYXRuMGNi#" target="_blank" aria-label="Link para o Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/regente-app?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="Link para o LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
         </div>
-      </section>
-
+        
+      </div>
       <div class="copyright">
-        <p>&copy; 2024 ReGente. Todos os direitos reservados.</p>
+        <p>&copy; 2025 ReGente. Todos os direitos reservados.</p>
       </div>
     </footer>
 

@@ -1,0 +1,28 @@
+/* --- Reset and Global Styles --- */
+:root {
+  --primary-color: #ff8939;
+  --secondary-color: #fca844;
+  --btn-color: #f58b44;
+  --text-color: #444950;
+  --light-text-color: #ffffff;
+  --dark-bg-color: #212121;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  background-attachment: fixed;
+  color: var(--light-text-color);
+}
