@@ -1,82 +1,87 @@
+/*---Footer styles*/
+
 footer {
   background-color: #212121;
   color: #fff;
-  padding: 50px 0;
-  font-weight: 800;
+  padding: 50px 20px;
+  font-weight: 600;
 }
 
-section {
+footer .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 15px;
 }
 
-.logo {
-  margin-left: 100px;
-  display: flex;
-  align-items: center;
-}
-.logo img {
+.footer-logo img {
   height: 50px;
 }
 
-#div-nav {
-  margin-right: 80px;
+footer .footer-nav ul {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: 20px;
 }
 
-#div-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 0;
-  padding: 0;
-}
-
-#div-nav ul li {
-  margin: 5px 0;
-}
-
-#div-nav ul li a {
+footer .footer-nav a {
   color: #ffffff;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 5px;
+  transition: text-decoration 0.3s ease;
+}
+
+footer .footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #212121;
+  background-color: #fff;
 }
 
 footer .copyright {
   font-size: 14px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
 }
 
-/* Media Queries */
-@media only screen and (max-width: 768px) {
-  section,
-  .logo,
-  #div-nav {
+/*--- Responsividade do Footer ---*/
+
+@media (max-width: 768px) {
+  footer .footer-content {
     flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-    margin-right: 0;
+    text-align: center;
   }
 
-  .logo img {
-    margin-bottom: 10px; /* Adiciona espaço entre o logo e a navegação */
+  footer .footer-nav ul {
+    flex-direction: column;
+    gap: 15px;
   }
 
-  #div-nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  #div-nav ul li {
-    margin: 10px; /* Aumenta o espaçamento entre os itens de navegação */
+  .footer-social {
+    margin-top: 20px;
   }
 }

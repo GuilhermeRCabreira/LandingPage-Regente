@@ -1,43 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReGente - Política de Privacidade</title>
-    <link rel="stylesheet" href="./assets/css/politica.css" />
-    <link rel="stylesheet" href="./assets/css/footer.css" />
-    <link rel="stylesheet" href="./assets/css/header.css" />
+    <title>ReGente</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/politica.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
   </head>
   <body>
+    
     <header>
       <nav>
+        <a href="./index.html" class="logo-link">
+          <img src="./assets/logo_regente_branco.svg" alt="Logo ReGente" />
+        </a>
         <input type="checkbox" id="check" />
-
         <label for="check" class="checkbtn">
           <i class="fas fa-bars"></i>
         </label>
-
-        <label class="logo">
-          <img src="./assets/logo_regente_branco.svg" alt="Logo ReGente" />
-        </label>
-
-        <ul>
-          <li><a href="/">Pagina Inicial</a></li>
+        <ul class="nav-links">
+          <li><a href="./index.html" >Página Inicial</a></li>
           <li><a href="./sobre.html">Sobre</a></li>
           <li><a href="./termos_de_uso.html">Termos de Uso</a></li>
           <li>
-            <a href="./politica_de_privicidade.html">Política de Privacidade</a>
+            <a href="./politica_de_privicidade.html" class="active">Política de Privacidade</a>
           </li>
-          <li><a href="./contato.html">Contato</a></li>
+          <!-- <li><a href="./contato.html">Contato</a></li> -->
         </ul>
       </nav>
     </header>
+
     <main>
       <div id="main-content">
         <h1>Política de Privacidade</h1>
@@ -422,24 +430,41 @@
         </p>
       </div>
     </main>
+
     <footer>
-      <section>
-        <div class="logo">
+      <div class="footer-content">
+        <div class="footer-logo">
           <img src="./assets/logo_regente_branco.svg" alt="Logo ReGente" />
         </div>
-        <div id="div-nav">
-          <nav>
-            <ul>
-              <li><a href="/">Pagina Inicial</a></li>
-              <li><a href="./sobre.html">Sobre</a></li>
-              <li><a href="./contato.html">Contato</a></li>
-            </ul>
-          </nav>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="./index.html" class="active">Página Inicial</a></li>
+            <li><a href="./sobre.html">Sobre</a></li>
+            <li><a href="./termos_de_uso.html">Termos de Uso</a></li>
+            <li>
+              <a href="./politica_de_privicidade.html"
+                >Política de Privacidade</a
+              >
+            </li>
+          </ul>
+        </nav>
+        
+        <div class="footer-social">
+           
+            </a>
+            <a href="https://www.instagram.com/regenteapp/?utm_source=qr&igsh=OGRwZHMxYXRuMGNi#" target="_blank" aria-label="Link para o Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/regente-app?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="Link para o LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
         </div>
-      </section>
+        
+      </div>
       <div class="copyright">
-        <p>&copy; 2024 ReGente. Todos os direitos reservados.</p>
+        <p>&copy; 2025 ReGente. Todos os direitos reservados.</p>
       </div>
     </footer>
+    
   </body>
 </html>
